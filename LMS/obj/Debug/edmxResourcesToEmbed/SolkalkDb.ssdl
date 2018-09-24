@@ -1,0 +1,224 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="SolkalkDbModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'SolkalkDb.dbo.__MigrationHistory' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="__MigrationHistory">
+    <Key>
+      <PropertyRef Name="MigrationId" />
+      <PropertyRef Name="ContextKey" />
+      <PropertyRef Name="Model" />
+      <PropertyRef Name="ProductVersion" />
+    </Key>
+    <Property Name="MigrationId" Type="nvarchar" MaxLength="150" Nullable="false" />
+    <Property Name="ContextKey" Type="nvarchar" MaxLength="300" Nullable="false" />
+    <Property Name="Model" Type="varbinary(max)" Nullable="false" />
+    <Property Name="ProductVersion" Type="nvarchar" MaxLength="32" Nullable="false" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'SolkalkDb.dbo.AspNetRoles' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="AspNetRoles">
+    <Key>
+      <PropertyRef Name="Id" />
+      <PropertyRef Name="Name" />
+    </Key>
+    <Property Name="Id" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="256" Nullable="false" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'SolkalkDb.dbo.AspNetUserClaims' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="AspNetUserClaims">
+    <Key>
+      <PropertyRef Name="Id" />
+      <PropertyRef Name="UserId" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" />
+    <Property Name="UserId" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="ClaimType" Type="nvarchar(max)" />
+    <Property Name="ClaimValue" Type="nvarchar(max)" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'SolkalkDb.dbo.AspNetUserLogins' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="AspNetUserLogins">
+    <Key>
+      <PropertyRef Name="LoginProvider" />
+      <PropertyRef Name="ProviderKey" />
+      <PropertyRef Name="UserId" />
+    </Key>
+    <Property Name="LoginProvider" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="ProviderKey" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="UserId" Type="nvarchar" MaxLength="128" Nullable="false" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'SolkalkDb.dbo.AspNetUserRoles' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="AspNetUserRoles">
+    <Key>
+      <PropertyRef Name="UserId" />
+      <PropertyRef Name="RoleId" />
+    </Key>
+    <Property Name="UserId" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="RoleId" Type="nvarchar" MaxLength="128" Nullable="false" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'SolkalkDb.dbo.AspNetUsers' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="AspNetUsers">
+    <Key>
+      <PropertyRef Name="Id" />
+      <PropertyRef Name="EmailConfirmed" />
+      <PropertyRef Name="PhoneNumberConfirmed" />
+      <PropertyRef Name="TwoFactorEnabled" />
+      <PropertyRef Name="LockoutEnabled" />
+      <PropertyRef Name="AccessFailedCount" />
+      <PropertyRef Name="UserName" />
+    </Key>
+    <Property Name="Id" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="Email" Type="nvarchar" MaxLength="256" />
+    <Property Name="EmailConfirmed" Type="bit" Nullable="false" />
+    <Property Name="PasswordHash" Type="nvarchar(max)" />
+    <Property Name="SecurityStamp" Type="nvarchar(max)" />
+    <Property Name="PhoneNumber" Type="nvarchar(max)" />
+    <Property Name="PhoneNumberConfirmed" Type="bit" Nullable="false" />
+    <Property Name="TwoFactorEnabled" Type="bit" Nullable="false" />
+    <Property Name="LockoutEndDateUtc" Type="datetime" />
+    <Property Name="LockoutEnabled" Type="bit" Nullable="false" />
+    <Property Name="AccessFailedCount" Type="int" Nullable="false" />
+    <Property Name="UserName" Type="nvarchar" MaxLength="256" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Company">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" />
+    <Property Name="Name" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="InstalledPower" Type="float" Nullable="false" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'SolkalkDb.dbo.InstalledPowerMunicipalities' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="InstalledPowerMunicipalities">
+    <Key>
+      <PropertyRef Name="ID" />
+      <PropertyRef Name="BaseInstalledPower" />
+      <PropertyRef Name="Inhabitants" />
+    </Key>
+    <Property Name="ID" Type="int" Nullable="false" />
+    <Property Name="Kommun" Type="nvarchar(max)" />
+    <Property Name="BaseInstalledPower" Type="int" Nullable="false" />
+    <Property Name="Inhabitants" Type="int" Nullable="false" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'SolkalkDb.dbo.InstalledPowerOrganisations' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="InstalledPowerOrganisations">
+    <Key>
+      <PropertyRef Name="ID" />
+      <PropertyRef Name="BaseInstalledPower" />
+    </Key>
+    <Property Name="ID" Type="int" Nullable="false" />
+    <Property Name="Organisation" Type="nvarchar(max)" />
+    <Property Name="BaseInstalledPower" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Municipality">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" />
+    <Property Name="Name" Type="varchar" MaxLength="50" />
+    <Property Name="InstalledPwer" Type="float" Nullable="false" />
+    <Property Name="Inhabitants" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ProducedCompanyPower">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Företag" Type="varchar" MaxLength="15" Nullable="false" />
+    <Property Name="Energi" Type="float" Nullable="false" />
+    <Property Name="Year" Type="varchar" MaxLength="15" Nullable="false" />
+    <Property Name="Month" Type="varchar" MaxLength="15" Nullable="false" />
+    <Property Name="Day" Type="varchar" MaxLength="15" Nullable="false" />
+    <Property Name="Irradiance" Type="float" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ProducedMunicipalPower">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Kommun" Type="varchar" MaxLength="15" Nullable="false" />
+    <Property Name="Energi" Type="float" Nullable="false" />
+    <Property Name="Year" Type="varchar" MaxLength="15" Nullable="false" />
+    <Property Name="Month" Type="varchar" MaxLength="15" Nullable="false" />
+    <Property Name="Day" Type="varchar" MaxLength="15" Nullable="false" />
+    <Property Name="Inhabitants" Type="int" Nullable="false" />
+    <Property Name="Irradiance" Type="float" Nullable="false" />
+  </EntityType>
+  <EntityContainer Name="SolkalkDbModelStoreContainer">
+    <EntitySet Name="Company" EntityType="Self.Company" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Municipality" EntityType="Self.Municipality" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ProducedCompanyPower" EntityType="Self.ProducedCompanyPower" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ProducedMunicipalPower" EntityType="Self.ProducedMunicipalPower" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="__MigrationHistory" EntityType="Self.__MigrationHistory" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [__MigrationHistory].[MigrationId] AS [MigrationId], 
+    [__MigrationHistory].[ContextKey] AS [ContextKey], 
+    [__MigrationHistory].[Model] AS [Model], 
+    [__MigrationHistory].[ProductVersion] AS [ProductVersion]
+    FROM [dbo].[__MigrationHistory] AS [__MigrationHistory]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="AspNetRoles" EntityType="Self.AspNetRoles" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [AspNetRoles].[Id] AS [Id], 
+    [AspNetRoles].[Name] AS [Name]
+    FROM [dbo].[AspNetRoles] AS [AspNetRoles]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="AspNetUserClaims" EntityType="Self.AspNetUserClaims" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [AspNetUserClaims].[Id] AS [Id], 
+    [AspNetUserClaims].[UserId] AS [UserId], 
+    [AspNetUserClaims].[ClaimType] AS [ClaimType], 
+    [AspNetUserClaims].[ClaimValue] AS [ClaimValue]
+    FROM [dbo].[AspNetUserClaims] AS [AspNetUserClaims]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="AspNetUserLogins" EntityType="Self.AspNetUserLogins" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [AspNetUserLogins].[LoginProvider] AS [LoginProvider], 
+    [AspNetUserLogins].[ProviderKey] AS [ProviderKey], 
+    [AspNetUserLogins].[UserId] AS [UserId]
+    FROM [dbo].[AspNetUserLogins] AS [AspNetUserLogins]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="AspNetUserRoles" EntityType="Self.AspNetUserRoles" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [AspNetUserRoles].[UserId] AS [UserId], 
+    [AspNetUserRoles].[RoleId] AS [RoleId]
+    FROM [dbo].[AspNetUserRoles] AS [AspNetUserRoles]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="AspNetUsers" EntityType="Self.AspNetUsers" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [AspNetUsers].[Id] AS [Id], 
+    [AspNetUsers].[Email] AS [Email], 
+    [AspNetUsers].[EmailConfirmed] AS [EmailConfirmed], 
+    [AspNetUsers].[PasswordHash] AS [PasswordHash], 
+    [AspNetUsers].[SecurityStamp] AS [SecurityStamp], 
+    [AspNetUsers].[PhoneNumber] AS [PhoneNumber], 
+    [AspNetUsers].[PhoneNumberConfirmed] AS [PhoneNumberConfirmed], 
+    [AspNetUsers].[TwoFactorEnabled] AS [TwoFactorEnabled], 
+    [AspNetUsers].[LockoutEndDateUtc] AS [LockoutEndDateUtc], 
+    [AspNetUsers].[LockoutEnabled] AS [LockoutEnabled], 
+    [AspNetUsers].[AccessFailedCount] AS [AccessFailedCount], 
+    [AspNetUsers].[UserName] AS [UserName]
+    FROM [dbo].[AspNetUsers] AS [AspNetUsers]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="InstalledPowerMunicipalities" EntityType="Self.InstalledPowerMunicipalities" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [InstalledPowerMunicipalities].[ID] AS [ID], 
+    [InstalledPowerMunicipalities].[Kommun] AS [Kommun], 
+    [InstalledPowerMunicipalities].[BaseInstalledPower] AS [BaseInstalledPower], 
+    [InstalledPowerMunicipalities].[Inhabitants] AS [Inhabitants]
+    FROM [dbo].[InstalledPowerMunicipalities] AS [InstalledPowerMunicipalities]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="InstalledPowerOrganisations" EntityType="Self.InstalledPowerOrganisations" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [InstalledPowerOrganisations].[ID] AS [ID], 
+    [InstalledPowerOrganisations].[Organisation] AS [Organisation], 
+    [InstalledPowerOrganisations].[BaseInstalledPower] AS [BaseInstalledPower]
+    FROM [dbo].[InstalledPowerOrganisations] AS [InstalledPowerOrganisations]</DefiningQuery>
+    </EntitySet>
+  </EntityContainer>
+</Schema>

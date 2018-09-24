@@ -1,0 +1,36 @@
+﻿@model LMS.Models.InstalledPowerMunicipality
+
+<div>
+    <h4>InstalledPowerMunicipality</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Kommun)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Kommun)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.BaseInstalledPower)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.BaseInstalledPower)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Inhabitants)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Inhabitants)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.ID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
