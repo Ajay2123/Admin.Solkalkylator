@@ -10,6 +10,6 @@ namespace LMS.Models
         public int ID { get; set; }
 
         public string Organisation { get; set; }
-        public int BaseInstalledPower { get; set; }
+        public double BaseInstalledPower { get; set; }
     }
 }

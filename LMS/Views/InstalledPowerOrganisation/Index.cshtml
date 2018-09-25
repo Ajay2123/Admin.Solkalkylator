@@ -1,8 +1,11 @@
 ﻿@model IEnumerable<LMS.Models.InstalledPowerOrganisation>
 
-<h4>
-    @Html.ActionLink("Create New", "Create")
-</h4>
+<h2>
+    <button type="button" class="btn btn-default btn-lg">
+        <span class="glyphicon glyphicon-plus-sign" aria-hidden="true"></span> @Html.ActionLink("Create New", "Create", routeValues: null, htmlAttributes: new { id = "CreateLink" })
+    </button>
+</h2>
+
 <table class="table">
     <tr>
         <th>
@@ -33,5 +36,7 @@
 </table>
 
 <div>
-    @Html.ActionLink("Back to List", "InstalledPower","LMS")
+    <button type="button" class="btn btn-default btn-lg">
+        <span class="glyphicon glyphicon-circle-arrow-left" aria-hidden="true"></span> @Html.ActionLink("Back to List", "InstalledPower", "LMS")
+    </button>
 </div>

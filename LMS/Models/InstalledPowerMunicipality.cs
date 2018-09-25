@@ -10,7 +10,8 @@ namespace LMS.Models
         public int ID { get; set; }
 
         public string Kommun { get; set; }
-        public int BaseInstalledPower { get; set; }
+
+        public double BaseInstalledPower { get; set; }
         public int Inhabitants { get; set; }
     }
 }
