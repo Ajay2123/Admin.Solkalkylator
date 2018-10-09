@@ -237,7 +237,6 @@ E:\repos\LMS\LMS\bin\Microsoft.AI.DependencyCollector.xml
 E:\repos\LMS\LMS\bin\Microsoft.AI.WindowsServer.xml
 E:\repos\LMS\LMS\bin\Microsoft.AI.Web.xml
 E:\repos\LMS\LMS\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
-E:\repos\LMS\LMS\obj\Debug\LMS.csprojAssemblyReference.cache
 E:\repos\LMS\LMS\obj\Debug\LMS.Migrations.InitialCreate.resources
 E:\repos\LMS\LMS\obj\Debug\LMS.Migrations.InstalledPowerOrganisationTable.resources
 E:\repos\LMS\LMS\obj\Debug\LMS.Migrations.InstalledPowerMunicipalityTable.resources

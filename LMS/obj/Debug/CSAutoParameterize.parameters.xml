@@ -1,6 +1,0 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<parameters>
-  <parameter name="DefaultConnection-Web.config Connection String" description="DefaultConnection Connection String used in web.config by the application to access the database." defaultValue="data source=solkalkdb.cqjgliexpw2a.eu-west-1.rds.amazonaws.com;initial catalog=SolkalkDb;persist security info=True;user id=NFK2018;password=NFKsolkalk" tags="SqlConnectionString">
-    <parameterEntry kind="XmlFile" scope="E:\\repos\\LMS\\LMS\\obj\\Debug\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='DefaultConnection']/@connectionString" />
-  </parameter>
-</parameters>
